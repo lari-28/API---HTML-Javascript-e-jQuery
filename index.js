@@ -53,7 +53,7 @@ function loadComments(postId) {
     const commentSection = document.getElementById(`comments-${postId}`);
     if (commentSection.style.display === 'block') {
         commentSection.style.display = 'none';
-        commentSection.innerHTML = ''; // Clear comments when hidden
+        commentSection.innerHTML = ''; // Limpar comentários quando escondido
         return;
     }
 
@@ -65,7 +65,7 @@ function loadComments(postId) {
             return response.json();
         })
         .then(comments => {
-            commentSection.innerHTML = ''; // Clear existing comments before adding new ones
+            commentSection.innerHTML = ''; // Limpar comentários existentes antes de adicionar novos
             comments.forEach(comment => {
                 const commentElement = `
                     <div class="comment">
@@ -75,7 +75,7 @@ function loadComments(postId) {
                 `;
                 commentSection.innerHTML += commentElement;
             });
-            commentSection.style.display = 'block'; // Show comments after loading
+            commentSection.style.display = 'block'; // Mostrar comentários após carregar
             hideLoading();
         })
         .catch(() => {
@@ -85,6 +85,13 @@ function loadComments(postId) {
 }
 
 function loadAllComments() {
+    // Esconder todos os comentários antes de carregar
+    const allCommentSections = document.querySelectorAll('.comments');
+    allCommentSections.forEach(section => {
+        section.style.display = 'none'; // Esconder todos os comentários
+        section.innerHTML = ''; // Limpar todos os comentários
+    });
+
     showLoading();
     clearError();
     fetch("https://jsonplaceholder.typicode.com/comments")
@@ -102,9 +109,9 @@ function loadAllComments() {
                             <p>${comment.body}</p>
                         </div>
                     `;
-                    // Append comments to their respective sections
+                    // Adicionar comentários às suas respectivas seções
                     commentSection.innerHTML += commentElement;
-                    commentSection.style.display = 'block'; // Ensure comments are visible
+                    commentSection.style.display = 'block'; // Garantir que os comentários sejam visíveis
                 }
             });
             hideLoading();
