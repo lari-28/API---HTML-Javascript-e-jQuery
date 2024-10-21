@@ -9,15 +9,19 @@
     <script src="index.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <h1>Listagem de Posts e Comentários</h1>
-    
-    <!-- Botão para carregar todos os comentários -->
-    <button id="loadAllComments">Carregar Todos os Comentários</button>
-    
-    <!-- Área onde os posts serão exibidos -->
-    <div id="posts"></div>
+    <header>
+        <h1>Listagem de Posts e Comentários</h1>
+    </header>
 
-    <!-- Div para exibir a animação de loading -->
+    <div id="content">
+        <aside>
+            <button id="loadAllComments">Carregar Todos os Comentários</button>
+        </aside>
+        <main>
+            <div id="posts"></div>
+        </main>
+    </div>
+
     <div id="loading" style="display:none;">Carregando...</div>
 </body>
 </html>
