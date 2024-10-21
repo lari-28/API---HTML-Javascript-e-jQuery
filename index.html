@@ -1,20 +1,23 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExercicioJS/HTTP</title>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="jquery-3.7.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <script>
-      window.addEventListener('load', () => loadComments());
-    </script>
-    <h1>Listagem</h1>
-    <div>
-      <div id="informacoes">
-          
-      </div>
-    </div>
-  </body>
-</html>
+    <script src="jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <h1>Listagem de Posts e Comentários</h1>
+    
+    <!-- Botão para carregar todos os comentários -->
+    <button id="loadAllComments">Carregar Todos os Comentários</button>
+    
+    <!-- Área onde os posts serão exibidos -->
+    <div id="posts"></div>
 
+    <!-- Div para exibir a animação de loading -->
+    <div id="loading" style="display:none;">Carregando...</div>
+</body>
+</html>

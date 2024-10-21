@@ -1,14 +1,65 @@
-*{
-    color: black;
-    font-size: 35px;
-    font-family: 'Times New Roman', Times, serif;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-.albumId{
-    display: flex;
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-input{
-    border: none;
+#posts {
+    margin-top: 20px;
+}
+
+.post {
     background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    font-size: 1.5em;
+}
+
+.post p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.comment {
+    margin-left: 20px;
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
 }
