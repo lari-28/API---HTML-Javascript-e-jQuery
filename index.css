@@ -1,0 +1,14 @@
+*{
+    color: black;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.albumId{
+    display: flex;
+}
+
+input{
+    border: none;
+    background-color: white;
+}
