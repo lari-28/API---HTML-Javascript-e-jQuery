@@ -31,8 +31,7 @@ function loadPosts() {
                 const postElement = `
                     <div class="post">
                         <h2>${post.title}</h2>
-                        <p><strong>ID:</strong> ${post.id}</p>
-                        <p><strong>Usuário ID:</strong> ${post.userId}</p>
+                        <h5><strong>ID:</strong> ${post.id} | Usuário ID:</strong> ${post.userId}</h5>
                         <p>${post.body}</p>
                         <button class="loadComments" data-post-id="${post.id}">Carregar Comentários</button>
                         <div class="comments" id="comments-${post.id}" style="display:none;"></div>
