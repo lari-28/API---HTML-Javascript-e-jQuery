@@ -42,21 +42,6 @@ function carregarPosts() {
                     '</div>';
             }
             esconderCarregando();
-            let postContainer = document.getElementById('posts');
-            postContainer.innerHTML = '';
-            posts.forEach(post => {
-                const postElement = `
-                    <div class="post">
-                        <h2>${post.title}</h2>
-                        <h5><strong>ID:</strong> ${post.id} | Usuário ID:</strong> ${post.userId}</h5>
-                        <p>${post.body}</p>
-                        <button class="loadComments" data-post-id="${post.id}">Carregar Comentários</button>
-                        <div class="comments" id="comments-${post.id}" style="display:none;"></div>
-                    </div>
-                `;
-                postContainer.innerHTML += postElement;
-            });
-            hideLoading();
         },
         error: function() {
             mostrarErro("Erro ao carregar os posts.");
